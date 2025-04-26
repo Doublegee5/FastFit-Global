@@ -41,13 +41,30 @@ body {
     color: #00bcd4;
 }
 
-/* Hero Section */
+/* Hero Section with Background Image */
 .hero {
+    position: relative;
     text-align: center;
     padding: 4em 1em;
-    background: linear-gradient(to bottom, #00bcd4, #008c9e);
+    background: url('your-background-image.jpg') no-repeat center center/cover;
     color: white;
     animation: fadeIn 1.5s ease-in; /* Fade-in animation */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Add semi-transparent overlay */
+    z-index: 1;
+}
+
+.hero h1, .hero p, .cta-button {
+    position: relative;
+    z-index: 2; /* Ensure text is above overlay */
 }
 
 .hero h1 {
@@ -148,6 +165,32 @@ footer {
     text-align: center;
     background-color: #333;
     color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .cta-button {
+        padding: 0.6em 1.5em;
+        font-size: 0.9em;
+    }
+
+    .service-card {
+        margin: 1em auto;
+        width: 90%;
+    }
+
+    .contact input, .contact textarea {
+        width: 95%;
+    }
 }
 
 /* Keyframes for Animations */
