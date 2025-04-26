@@ -353,3 +353,28 @@ form button {
         margin: 10px 0;
     }
 }
+
+#bmi-calculator {
+  padding: 50px 20px;
+  background: #f0f0f0;
+  text-align: center;
+}
+
+#bmiForm input {
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  max-width: 80%;
+}
+
+#bmiForm button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#bmiForm button:hover {
+  background-color: #218838;
+}
