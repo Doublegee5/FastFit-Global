@@ -258,3 +258,98 @@ footer {
         transform: translateY(-5px);
     }
 }
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: #007bff;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero .btn {
+    background: #fff;
+    color: #007bff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* Main Content */
+.content {
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 30px;
+}
+
+/* Form */
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #007bff;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
