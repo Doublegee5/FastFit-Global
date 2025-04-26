@@ -87,3 +87,63 @@ footer {
     text-align: center;
     padding: 1rem 0;
 }
+
+/* Basic Reset */
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #333;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+/* Section Styles */
+section {
+    padding: 100px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+#home {
+    background-color: #f4f4f4;
+}
+
+#about {
+    background-color: #eaeaea;
+}
+
+#services {
+    background-color: #f4f4f4;
+}
+
+#contact {
+    background-color: #eaeaea;
+}
