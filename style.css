@@ -147,3 +147,220 @@ section {
 #contact {
     background-color: #eaeaea;
 }
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #333;
+    padding: 1em 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 0.5s ease-out; /* Slide in animation */
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4em 1em;
+    background: linear-gradient(to bottom, #00bcd4, #008c9e);
+    color: white;
+    animation: fadeIn 1.5s ease-in; /* Fade-in animation */
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.cta-button {
+    padding: 0.8em 2em;
+    background-color: #fff;
+    color: #00bcd4;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    animation: bounce 2s infinite; /* Bouncing button */
+}
+
+.cta-button:hover {
+    background-color: #00bcd4;
+    color: #fff;
+}
+
+/* About Section */
+.about {
+    padding: 4em 1em;
+    text-align: center;
+    background-color: #fff;
+    animation: slideInLeft 1s ease-out; /* Slide-in animation */
+}
+
+.about h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+/* Services Section */
+.services {
+    padding: 4em 1em;
+    text-align: center;
+    background-color: #f4f4f4;
+    animation: slideInRight 1s ease-out; /* Slide-in animation */
+}
+
+.service-card {
+    margin: 1em 0;
+    padding: 1em;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in; /* Fade-in animation */
+}
+
+/* Contact Section */
+.contact {
+    padding: 4em 1em;
+    text-align: center;
+    background-color: #fff;
+    animation: slideUp 1s ease-out; /* Slide-up animation */
+}
+
+.contact input, .contact textarea {
+    width: 80%;
+    padding: 0.8em;
+    margin: 0.5em 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.contact input:focus, .contact textarea:focus {
+    border-color: #00bcd4;
+}
+
+.submit-button {
+    padding: 0.8em 2em;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #008c9e;
+}
+
+/* Footer */
+footer {
+    padding: 1em;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Keyframes for Animations */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
