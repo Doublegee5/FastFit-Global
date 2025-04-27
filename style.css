@@ -223,4 +223,10 @@ footer ul li a:hover {
         display: block;
         margin-bottom: 10px;
     }
+
+    .error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+  display: block;
 }
