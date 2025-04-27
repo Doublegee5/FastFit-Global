@@ -76,6 +76,30 @@
       <li><a href="#">Terms & Conditions</a></li>
     </ul>
   </footer>
+  
+  <script>
+  const form = document.getElementById('contact-form');
+  const successMessage = document.getElementById('form-success');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault(); // Stop normal form submission
+    const formData = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      form.reset(); // Clear the form
+      successMessage.style.display = 'block'; // Show thank you message
+    } else {
+      alert('Oops! There was a problem submitting your form.');
+    }
+  });
+</script>
 
 </body>
 </html>
