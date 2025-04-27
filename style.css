@@ -36,37 +36,11 @@ nav ul li a {
     font-size: 1.2em;
     font-weight: bold;
     text-transform: uppercase;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 nav ul li a:hover {
     color: #f4b400;  /* Hover effect color */
-}
-
-/* Hero Section */
-#hero {
-    background: url('https://images.unsplash.com/photo-1554284126-2981b3f066b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1650&q=80') no-repeat center center/cover;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-    padding: 20px;
-}
-
-.hero-content {
-    max-width: 700px;
-}
-
-#hero h2 {
-    font-size: 2.8em;
-    margin-bottom: 15px;
-}
-
-#hero p {
-    font-size: 1.4em;
 }
 
 /* Main content area */
@@ -84,13 +58,13 @@ section {
 
 section h1, section h2 {
     font-size: 2.5em;
-    color: #333;
+    color: #333;  /* Dark text for headings */
     margin-bottom: 20px;
 }
 
 section p {
     font-size: 1.2em;
-    color: #555;
+    color: #555;  /* Slightly lighter text for paragraphs */
     line-height: 1.8;
 }
 
@@ -98,89 +72,101 @@ section a {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #333;  /* Dark background for action buttons */
     color: white;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
 }
 
 section a:hover {
-    background-color: #f4b400;
-    color: #333;
+    background-color: #f4b400;  /* Hover effect background color */
+    color: #333;  /* Change text color on hover */
 }
 
-/* Contact Form Styling */
-form {
+/* Modern Contact Form */
+.contact-container {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
     margin-top: 20px;
-    display: flex;
-    flex-direction: column;
 }
 
-form label {
-    margin: 10px 0 5px;
-    font-weight: bold;
+.form-group {
+    margin-bottom: 20px;
 }
 
-form input, form textarea {
-    padding: 10px;
-    font-size: 1em;
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
 }
 
-form textarea {
-    min-height: 150px;
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #f4b400;
+    outline: none;
 }
 
-form button {
-    margin-top: 15px;
-    padding: 12px;
-    background-color: #333;
-    color: white;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-form button:hover {
-    background-color: #f4b400;
-    color: #333;
-}
-
-/* Social Media Links */
-#contact ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 15px;
-}
-
-#contact ul li {
+.btn-submit {
     display: inline-block;
-    margin-right: 15px;
-}
-
-#contact ul li a {
     background-color: #333;
     color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
+    padding: 12px 25px;
+    font-size: 1em;
     font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#contact ul li a:hover {
+.btn-submit:hover {
     background-color: #f4b400;
     color: #333;
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #f4b400;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-top: 30px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
 }
 
 /* Footer styles */
 footer {
-    background-color: #333;
+    background-color: #333;  /* Dark footer background */
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -210,7 +196,7 @@ footer ul li a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Design */
+/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     header {
         padding: 15px;
@@ -227,6 +213,10 @@ footer ul li a:hover {
 
     section h1, section h2 {
         font-size: 2em;
+    }
+
+    .contact-container {
+        padding: 20px;
     }
 
     footer ul li {
