@@ -1,143 +1,159 @@
-/* Reset some default styles for consistency across browsers */
+/* Global Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* General body styles */
+/* Body Styling */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #fff;  /* White background for the body */
-    color: #333;  /* Dark text for better readability */
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  padding-top: 80px; /* So content doesn't hide under fixed header */
 }
 
-/* Header and Navigation */
+/* Header */
 header {
-    background-color: red;  /* Red background for the header */
-    padding: 10px 0;
-    text-align: center;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+/* Site Title */
+header h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
 }
 
-nav ul li a {
-    color: white;  /* White links in the header */
-    text-decoration: none;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #f4b400;  /* Hover effect color */
+nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
-/* Main content area */
+/* Main Section */
 main {
-    padding: 20px;
-    background-color: #fff;
-    margin: 20px auto;
-    max-width: 1100px;
-    border-radius: 10px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-section {
-    margin-bottom: 30px;
+/* Main Headings */
+main h2 {
+  margin-bottom: 20px;
+  color: #0072ff;
+  font-size: 2rem;
 }
 
-section h1, section h2 {
-    font-size: 2.5em;
-    color: #333;  /* Dark text for headings */
-    margin-bottom: 20px;
+main h3 {
+  margin-top: 20px;
+  color: #333;
+  font-size: 1.5rem;
 }
 
-section p {
-    font-size: 1.2em;
-    color: #555;  /* Slightly lighter text for paragraphs */
-    line-height: 1.8;
+/* Paragraphs */
+main p {
+  margin-bottom: 20px;
+  font-size: 1rem;
 }
 
-section a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #333;  /* Dark background for action buttons */
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+/* List Styling */
+main ul {
+  margin-bottom: 20px;
+  list-style-type: none;
 }
 
-section a:hover {
-    background-color: #f4b400;  /* Hover effect background color */
-    color: #333;  /* Change text color on hover */
+main li {
+  margin-bottom: 10px;
+  font-size: 1rem;
 }
 
-/* Footer styles */
+/* "Get Started" Button */
+a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #0072ff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 600;
+}
+
+a:hover {
+  background: #005bb5;
+}
+
+/* Footer */
 footer {
-    background-color: #333;  /* Dark footer background */
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #0072ff;
+  color: #fff;
+  margin-top: 40px;
 }
 
-footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-footer ul li {
-    display: inline;
-    margin-right: 15px;
-}
-
-footer ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: bold;
-}
-
-footer ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive Design for Smaller Screens */
+/* Responsive Design */
 @media (max-width: 768px) {
-    header {
-        padding: 15px;
-    }
+  header {
+    padding: 15px 0;
+  }
 
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
+  header h1 {
+    font-size: 1.5rem;
+  }
 
-    main {
-        padding: 15px;
-    }
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    section h1, section h2 {
-        font-size: 2em;
-    }
+  main {
+    margin: 20px;
+    padding: 15px;
+  }
 
-    footer ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
+  main h2 {
+    font-size: 1.5rem;
+  }
+
+  main h3 {
+    font-size: 1.2rem;
+  }
+
+  main p, main li {
+    font-size: 0.95rem;
+  }
+
+  a {
+    font-size: 0.9rem;
+  }
 }
