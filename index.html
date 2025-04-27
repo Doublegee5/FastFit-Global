@@ -1,127 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FitSync Global | Fitness, Healthcare, Life Hacks</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f8f9fa;
-      color: #333;
-    }
-    header {
-      background: #00a8e8;
-      padding: 20px;
-      color: white;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: white;
-      font-weight: 600;
-    }
-    .hero {
-      background: url('https://images.unsplash.com/photo-1599058917212-7264cb6d4bb0?fit=crop&w=1600&q=80') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 120px 20px;
-    }
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 20px;
-      margin-top: 0;
-    }
-    .section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-    .section h2 {
-      margin-bottom: 20px;
-      color: #00a8e8;
-    }
-    .section p {
-      max-width: 600px;
-      margin: 0 auto 20px;
-      line-height: 1.6;
-    }
-    .quote {
-      background: #00a8e8;
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
-      font-size: 24px;
-      font-style: italic;
-    }
-    footer {
-      background: #222;
-      color: #ccc;
-      padding: 20px;
-      text-align: center;
-      font-size: 14px;
-    }
-    footer a {
-      color: #00a8e8;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FitSync Global</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>FitSync Global</h1>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Fitness</a>
-    <a href="#">Healthcare</a>
-    <a href="#">Life Hacks</a>
-    <a href="#">Blog</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
-</header>
+    <!-- Header -->
+    <header>
+        <h1>FitSync Global</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Fitness</a></li>
+                <li><a href="#">Healthcare</a></li>
+                <li><a href="#">Life Hacks</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<section class="hero">
-  <h1>Welcome to FitSync Global</h1>
-  <p>Empowering Your Fitness, Health, and Life Journey</p>
-</section>
+    <!-- Main Content -->
+    <main>
+        <h2>Welcome to FitSync Global</h2>
+        <p>Your one-stop platform for fitness, healthcare, and life hacks. Join us as we empower you to live a healthier and more fulfilling life.</p>
 
-<section class="section">
-  <h2>Fitness</h2>
-  <p>Transform your body and mind with curated workout plans, fitness challenges, and expert advice. FitSync Global is your partner in physical excellence.</p>
-</section>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact FitSync Global</h2>
+            <p>Have questions or want to get in touch with us? Fill out the form below or connect with us on social media!</p>
 
-<section class="section">
-  <h2>Healthcare</h2>
-  <p>Stay informed and inspired. Our healthcare guides help you maintain balance, boost mental wellness, and prevent illness naturally and effectively.</p>
-</section>
+            <h3>Contact Form</h3>
+            <form action="submit_form.php" method="POST">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
 
-<section class="section">
-  <h2>Life Hacks</h2>
-  <p>Level up your everyday living. Learn productivity tricks, time management hacks, and mindset shifts that help you live smarter and stronger.</p>
-</section>
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
 
-<section class="quote">
-  "Discipline is choosing between what you want now and what you want most."
-</section>
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" required></textarea>
 
-<footer>
-  <p>© 2025 FitSync Global. All rights reserved.</p>
-  <p>
-    <a href="#">Instagram</a> | 
-    <a href="#">Twitter</a> | 
-    <a href="#">YouTube</a>
-  </p>
-</footer>
+                <button type="submit">Send Message</button>
+            </form>
+
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="https://facebook.com/fitsyncglobal" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com/fitsyncglobal" target="_blank">Twitter</a></li>
+                <li><a href="https://instagram.com/fitsyncglobal" target="_blank">Instagram</a></li>
+            </ul>
+
+            <h3>Contact Information</h3>
+            <p>Email: contact@fitsyncglobal.com</p>
+            <p>Phone: +123 456 7890</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 FitSync Global. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+    </footer>
 
 </body>
 </html>
-
