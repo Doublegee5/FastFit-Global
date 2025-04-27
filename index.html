@@ -1,57 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitness & Life Hacks</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitSync Global | Fitness, Healthcare, Life Hacks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: #00a8e8;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1599058917212-7264cb6d4bb0?fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 20px;
+      margin-top: 0;
+    }
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .section h2 {
+      margin-bottom: 20px;
+      color: #00a8e8;
+    }
+    .section p {
+      max-width: 600px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+    }
+    .quote {
+      background: #00a8e8;
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+      font-size: 24px;
+      font-style: italic;
+    }
+    footer {
+      background: #222;
+      color: #ccc;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+    footer a {
+      color: #00a8e8;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Fitness, Healthcare & Life Hacks</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="fitness.html">Fitness</a></li>
-                <li><a href="healthcare.html">Healthcare</a></li>
-                <li><a href="lifehacks.html">Life Hacks</a></li>
-                <nav>
-                <a href="index.html">Home</a>
-                <a href="blog.html">Blog</a>
-                <a href="#contact">Contact</a>
-                </nav>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="hero">
-            <h2>Welcome to Your Wellness Hub!</h2>
-            <p>Fitness tips, healthcare advice, and life-changing hacks all in one place.</p>
-            <a href="blog.html" class="btn">Explore Blog</a>
-        </section>
-    </main>
+<header>
+  <h1>FitSync Global</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Fitness</a>
+    <a href="#">Healthcare</a>
+    <a href="#">Life Hacks</a>
+    <a href="#">Blog</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
 
-    <footer>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
-    </footer>
+<section class="hero">
+  <h1>Welcome to FitSync Global</h1>
+  <p>Empowering Your Fitness, Health, and Life Journey</p>
+</section>
+
+<section class="section">
+  <h2>Fitness</h2>
+  <p>Transform your body and mind with curated workout plans, fitness challenges, and expert advice. FitSync Global is your partner in physical excellence.</p>
+</section>
+
+<section class="section">
+  <h2>Healthcare</h2>
+  <p>Stay informed and inspired. Our healthcare guides help you maintain balance, boost mental wellness, and prevent illness naturally and effectively.</p>
+</section>
+
+<section class="section">
+  <h2>Life Hacks</h2>
+  <p>Level up your everyday living. Learn productivity tricks, time management hacks, and mindset shifts that help you live smarter and stronger.</p>
+</section>
+
+<section class="quote">
+  "Discipline is choosing between what you want now and what you want most."
+</section>
+
+<footer>
+  <p>© 2025 FitSync Global. All rights reserved.</p>
+  <p>
+    <a href="#">Instagram</a> | 
+    <a href="#">Twitter</a> | 
+    <a href="#">YouTube</a>
+  </p>
+</footer>
+
 </body>
 </html>
-
-<section id="bmi-calculator">
-  <div class="container">
-    <h2 class="section-title">BMI Calculator</h2>
-    <p>Enter your height and weight to calculate your BMI:</p>
-
-    <form id="bmiForm">
-      <input type="number" id="height" placeholder="Height (cm)" required>
-      <input type="number" id="weight" placeholder="Weight (kg)" required>
-      <button type="submit">Calculate BMI</button>
-    </form>
-
-    <div id="bmiResult" style="margin-top: 20px; font-weight: bold;"></div>
-  </div>
-</section>
 
