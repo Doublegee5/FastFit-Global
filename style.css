@@ -1,119 +1,101 @@
-/* Reset some default styles */
+/* Global Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* General Styles */
+/* Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background: #f9f9f9;
-    color: #333;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  padding-top: 80px; /* So content doesn't hide under fixed header */
 }
 
 /* Header */
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
+/* Site Title */
+header h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
 }
 
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
-/* Hero Section */
-.hero {
-    background: #007bff;
-    color: #fff;
-    padding: 60px 20px;
-    text-align: center;
+nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
-.hero .btn {
-    background: #fff;
-    color: #007bff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 20px;
-    display: inline-block;
+/* Main Section */
+main {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Main Content */
-.content {
-    padding: 20px;
+/* Main Headings */
+main h2 {
+  margin-bottom: 20px;
+  color: #0072ff;
+  font-size: 2rem;
+}
+
+/* Paragraphs */
+main p {
+  margin-bottom: 20px;
+  font-size: 1rem;
 }
 
 /* Footer */
 footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 30px;
-}
-
-/* Form */
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-}
-
-form button {
-    padding: 10px 20px;
-    background: #007bff;
-    border: none;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    header nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-}
-
-#bmi-calculator {
-  padding: 50px 20px;
-  background: #f0f0f0;
   text-align: center;
+  padding: 20px;
+  background-color: #0072ff;
+  color: #fff;
+  margin-top: 40px;
 }
 
-#bmiForm input {
-  padding: 10px;
-  margin: 10px;
-  width: 200px;
-  max-width: 80%;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
 
-#bmiForm button {
-  padding: 10px 20px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-#bmiForm button:hover {
-  background-color: #218838;
+  main {
+    margin: 20px;
+    padding: 15px;
+  }
 }
