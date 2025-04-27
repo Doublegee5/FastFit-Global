@@ -1,73 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FitSync Global</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FitSync Global</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <div class="logo">
+      <h1>FitSync Global</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Header -->
-    <header>
-        <h1>FitSync Global</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Fitness</a></li>
-                <li><a href="#">Healthcare</a></li>
-                <li><a href="#">Life Hacks</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <section id="home">
+    <h2>Welcome to FitSync Global</h2>
+    <p>Your ultimate destination for fitness, health, and wellness solutions.</p>
+  </section>
 
-    <!-- Main Content -->
-    <main>
-        <h2>Welcome to FitSync Global</h2>
-        <p>Your one-stop platform for fitness, healthcare, and life hacks. Join us as we empower you to live a healthier and more fulfilling life.</p>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>At FitSync Global, we believe fitness and healthcare go hand-in-hand. Our goal is to help you build a stronger, healthier, and more confident version of yourself.</p>
+  </section>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact FitSync Global</h2>
-            <p>Have questions or want to get in touch with us? Fill out the form below or connect with us on social media!</p>
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="service">
+      <h3>Fitness Coaching</h3>
+      <p>Personalized plans to help you hit your fitness goals faster and smarter.</p>
+    </div>
+    <div class="service">
+      <h3>Nutrition Advice</h3>
+      <p>Meal plans and guidance to fuel your body and mind.</p>
+    </div>
+    <div class="service">
+      <h3>Wellness Programs</h3>
+      <p>Comprehensive programs to improve your health, reduce stress, and build discipline.</p>
+    </div>
+  </section>
 
-            <h3>Contact Form</h3>
-            <form action="submit_form.php" method="POST">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" required>
+  <section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial">
+      <p>"FitSync Global changed my life! I lost 20kg and gained a new mindset."</p>
+      <span>- Sarah M.</span>
+    </div>
+    <div class="testimonial">
+      <p>"The coaching is amazing and really personal. I finally feel confident in my health journey."</p>
+      <span>- John D.</span>
+    </div>
+  </section>
 
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" required>
+  <section id="newsletter">
+    <h2>Join Our Newsletter</h2>
+    <p>Get fitness tips, life hacks, and exclusive updates right in your inbox!</p>
+    <form action="subscribe.php" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
 
-                <label for="message">Your Message</label>
-                <textarea id="message" name="message" required></textarea>
+  <section id="contact">
+    <h2>Contact FitSync Global</h2>
+    <p>We'd love to hear from you! Reach out with your questions or feedback.</p>
+    <ul>
+      <li>Email: <a href="mailto:contact@fitsyncglobal.com">contact@fitsyncglobal.com</a></li>
+      <li>Phone: +1 (123) 456-7890</li>
+      <li>Location: 123 FitSync St, Health City</li>
+    </ul>
+  </section>
 
-                <button type="submit">Send Message</button>
-            </form>
-
-            <h3>Follow Us</h3>
-            <ul>
-                <li><a href="https://facebook.com/fitsyncglobal" target="_blank">Facebook</a></li>
-                <li><a href="https://twitter.com/fitsyncglobal" target="_blank">Twitter</a></li>
-                <li><a href="https://instagram.com/fitsyncglobal" target="_blank">Instagram</a></li>
-            </ul>
-
-            <h3>Contact Information</h3>
-            <p>Email: contact@fitsyncglobal.com</p>
-            <p>Phone: +123 456 7890</p>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 FitSync Global. All rights reserved.</p>
-        <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-        </ul>
-    </footer>
-
+  <footer>
+    <div class="footer-links">
+      <a href="#home">Home</a> |
+      <a href="#about">About</a> |
+      <a href="#services">Services</a> |
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://facebook.com/fitsyncglobal">Facebook</a> |
+      <a href="https://twitter.com/fitsyncglobal">Twitter</a> |
+      <a href="https://instagram.com/fitsyncglobal">Instagram</a>
+    </div>
+    <p>&copy; 2025 FitSync Global. All rights reserved.</p>
+  </footer>
 </body>
 </html>
