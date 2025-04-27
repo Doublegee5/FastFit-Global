@@ -34,23 +34,23 @@
         <h2>Contact FitSync Global</h2>
         <p>We'd love to hear from you! Fill out the form below and we'll get back to you shortly.</p>
 
-        <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
-    <label for="name">Your Name</label>
-    <input type="text" id="name" name="name" required>
+     <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+  
+  <label for="name">Your Name</label>
+  <input type="text" id="name" name="name" required>
+  <small id="nameError" class="error-message"></small> <!-- Error message for Name -->
 
-    <label for="email">Your Email</label>
-    <input type="email" id="email" name="email" required>
+  <label for="email">Your Email</label>
+  <input type="email" id="email" name="email" required>
+  <small id="emailError" class="error-message"></small> <!-- Error message for Email -->
 
-    <label for="message">Your Message</label>
-    <textarea id="message" name="message" required></textarea>
+  <label for="message">Your Message</label>
+  <textarea id="message" name="message" required></textarea>
+  <small id="messageError" class="error-message"></small> <!-- Error message for Message -->
 
-    <button type="submit">Send Message</button>
+  <button type="submit">Send Message</button>
 
-    <!-- This will be hidden until the form is successfully submitted -->
-    <p id="form-success" style="display:none; color: green; margin-top: 15px;">
-        Thank you for contacting us! We'll get back to you soon.
-    </p>
-</form>
+   </form>
 
         <div class="social-links">
           <h3>Follow Us</h3>
