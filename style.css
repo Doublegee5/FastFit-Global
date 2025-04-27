@@ -36,11 +36,34 @@ nav ul li a {
     font-size: 1.2em;
     font-weight: bold;
     text-transform: uppercase;
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
     color: #f4b400;  /* Hover effect color */
+}
+
+/* Hero Section */
+#hero {
+    background: url('https://images.unsplash.com/photo-1554284126-2981b3f066b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1650&q=80') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    text-align: center;
+    padding: 20px;
+}
+
+#hero h2 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.4em;
 }
 
 /* Main content area */
@@ -58,13 +81,13 @@ section {
 
 section h1, section h2 {
     font-size: 2.5em;
-    color: #333;  /* Dark text for headings */
+    color: #333;
     margin-bottom: 20px;
 }
 
 section p {
     font-size: 1.2em;
-    color: #555;  /* Slightly lighter text for paragraphs */
+    color: #555;
     line-height: 1.8;
 }
 
@@ -72,22 +95,89 @@ section a {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #333;  /* Dark background for action buttons */
+    background-color: #333;
     color: white;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 section a:hover {
-    background-color: #f4b400;  /* Hover effect background color */
-    color: #333;  /* Change text color on hover */
+    background-color: #f4b400;
+    color: #333;
+}
+
+/* Contact Form Styling */
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form textarea {
+    min-height: 150px;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #f4b400;
+    color: #333;
+}
+
+/* Social Media Links */
+#contact ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+#contact ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+#contact ul li a {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#contact ul li a:hover {
+    background-color: #f4b400;
+    color: #333;
 }
 
 /* Footer styles */
 footer {
-    background-color: #333;  /* Dark footer background */
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -117,7 +207,7 @@ footer ul li a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Design for Smaller Screens */
+/* Responsive Design */
 @media (max-width: 768px) {
     header {
         padding: 15px;
