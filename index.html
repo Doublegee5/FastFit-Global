@@ -79,26 +79,57 @@
   
   <script>
   const form = document.getElementById('contact-form');
-  const successMessage = document.getElementById('form-success');
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault(); // Stop normal form submission
-    const formData = new FormData(form);
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: formData,
-      headers: {
-        'Accept': 'application/json'
-      }
-    });
+  form.addEventListener('submit', function(event) {
+    let isValid = true;
 
-    if (response.ok) {
-      form.reset(); // Clear the form
-      successMessage.style.display = 'block'; // Show thank you message
-    } else {
-      alert('Oops! There was a problem submitting your form.');
+    // Get fields
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const message = document.getElementById('message');
+
+    // Get error message elements
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const messageError = document.getElementById('messageError');
+
+    // Clear previous errors
+    nameError.textContent = '';
+    emailError.textContent = '';
+    messageError.textContent = '';
+
+    // Validate Name
+    if (name.value.trim() === '') {
+      nameError.textContent = 'Please enter your name.';
+      isValid = false;
+    }
+
+    // Validate Email
+    if (email.value.trim() === '') {
+      emailError.textContent = 'Please enter your email.';
+      isValid = false;
+    } else if (!isValidEmail(email.value.trim())) {
+      emailError.textContent = 'Please enter a valid email address.';
+      isValid = false;
+    }
+
+    // Validate Message
+    if (message.value.trim() === '') {
+      messageError.textContent = 'Please enter your message.';
+      isValid = false;
+    }
+
+    // If any validation fails, prevent form from submitting
+    if (!isValid) {
+      event.preventDefault();
     }
   });
+
+  // Helper function to check valid email format
+  function isValidEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
 </script>
 
 </body>
