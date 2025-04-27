@@ -48,18 +48,21 @@ nav ul li a:hover {
     background: url('https://images.unsplash.com/photo-1554284126-2981b3f066b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1650&q=80') no-repeat center center/cover;
     height: 400px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-    text-align: center;
     padding: 20px;
+}
+
+.hero-content {
+    max-width: 700px;
 }
 
 #hero h2 {
     font-size: 2.8em;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 #hero p {
