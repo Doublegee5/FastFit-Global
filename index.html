@@ -22,6 +22,7 @@
         .content {
             padding: 20px;
             text-align: center;
+            display: none; /* Hidden by default, shown after joining */
         }
 
         .join-btn, .explore-btn {
@@ -81,6 +82,47 @@
         .fitness-tips li, .explore-blog li {
             margin: 10px 0;
         }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        .modal input {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .modal button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .modal button.close-btn {
+            background-color: #dc3545;
+        }
     </style>
 </head>
 <body>
@@ -91,47 +133,31 @@
     </header>
 
     <div class="content">
+        <!-- Content shown after user joins -->
         <h2>Welcome to Your Fitness Journey</h2>
         <p>Find tips, guides, and resources to help you improve your health and fitness. Start today and feel better tomorrow!</p>
         <a href="#explore" class="explore-btn">Explore Blog</a>
-        <a href="#join" class="join-btn">Join Now</a>
     </div>
 
-    <!-- Join Now Section -->
+    <!-- Join Now Section (Hidden by default) -->
     <section id="join" class="join-now">
         <h3>Join Now and Start Your Fitness Journey</h3>
-
-        <!-- Fitness Tips Section -->
-        <section class="fitness-tips">
-            <h4>Fitness Tips for You</h4>
-            <ul>
-                <li><a href="#">The Best Morning Routine to Boost Your Day</a></li>
-                <li><a href="#">5 Simple Weight Loss Tips to Get You Started</a></li>
-                <li><a href="#">How to Stay Consistent with Your Workout Plan</a></li>
-            </ul>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="testimonials">
-            <h4>Success Stories</h4>
-            <p><strong>John Doe</strong> - "I lost 20 pounds in 3 months thanks to the advice and support from Fast-Fit Global!"</p>
-            <p><strong>Jane Smith</strong> - "This platform has transformed my fitness routine. I feel stronger and more motivated every day."</p>
-        </section>
-
-        <!-- Explore Blog Section -->
-        <section class="explore-blog">
-            <h4>Explore Our Blog</h4>
-            <p>Find a range of articles and guides on fitness, nutrition, and life hacks to help you achieve your goals.</p>
-            <ul>
-                <li><a href="#">How to Create a Sustainable Fitness Plan</a></li>
-                <li><a href="#">Meal Prep Tips for Busy People</a></li>
-                <li><a href="#">Staying Motivated: Overcoming Fitness Plateaus</a></li>
-            </ul>
-        </section>
-
-        <!-- Call to Action -->
-        <a href="#join" class="join-btn">Join Now</a>
+        <button class="join-btn" id="joinBtn">Join Now</button>
     </section>
+
+    <!-- Modal for Joining -->
+    <div id="joinModal" class="modal">
+        <div class="modal-content">
+            <h3>Join Fast-Fit Global</h3>
+            <p>Enter your details to get started:</p>
+            <form id="joinForm">
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <button type="submit">Join Now</button>
+            </form>
+            <button class="close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
 
     <!-- Footer Section with Social Media Links -->
     <footer>
@@ -154,6 +180,26 @@
             </a>
         </div>
     </footer>
+
+    <script>
+        // Show modal when Join Now button is clicked
+        document.getElementById('joinBtn').addEventListener('click', function() {
+            document.getElementById('joinModal').style.display = 'flex';
+        });
+
+        // Close the modal when the user submits the form or clicks the close button
+        document.getElementById('joinForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('joinModal').style.display = 'none';
+            document.querySelector('.content').style.display = 'block';  // Show content after join
+            document.querySelector('.join-now').style.display = 'none';  // Hide Join Now button
+        });
+
+        // Close modal
+        function closeModal() {
+            document.getElementById('joinModal').style.display = 'none';
+        }
+    </script>
 
 </body>
 </html>
