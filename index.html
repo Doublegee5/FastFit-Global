@@ -76,6 +76,7 @@
             background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none; /* Hidden by default */
         }
 
         .explore-blog h2 {
@@ -151,7 +152,7 @@
         <!-- Content shown after user joins -->
         <h2>Welcome to Your Fitness Journey</h2>
         <p>Find tips, guides, and resources to help you improve your health and fitness. Start today and feel better tomorrow!</p>
-        <a href="#explore" class="explore-btn">Explore Blog</a>
+        <a href="#" class="explore-btn" id="exploreBtn">Explore Blog</a>
     </div>
 
     <!-- Join Now Section (Hidden by default) -->
@@ -174,8 +175,8 @@
         </div>
     </div>
 
-    <!-- Explore Blog Section -->
-    <div id="explore" class="explore-blog">
+    <!-- Explore Blog Section (Hidden by default, shown after clicking Explore Blog) -->
+    <div id="exploreBlog" class="explore-blog">
         <h2>Explore Our Fitness and Healthcare Blog</h2>
         <p>Our blog is dedicated to providing valuable insights, tips, and advice to help you lead a healthier and more active life. Here, you will find a variety of articles on fitness, nutrition, mental well-being, and more. Dive in and start learning how to improve your health and fitness with our expert advice.</p>
         
@@ -229,6 +230,11 @@
             document.getElementById('joinModal').style.display = 'none';
             document.querySelector('.content').style.display = 'block';  // Show content after join
             document.querySelector('.join-now').style.display = 'none';  // Hide Join Now button
+        });
+
+        // Show the Explore Blog content when the Explore Blog button is clicked
+        document.getElementById('exploreBtn').addEventListener('click', function() {
+            document.getElementById('exploreBlog').style.display = 'block';  // Show Explore Blog content
         });
 
         // Close modal
