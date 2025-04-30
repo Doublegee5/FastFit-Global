@@ -2,189 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FitSync Global - Your one-stop platform for fitness, healthcare, and life hacks." />
+  <meta name="keywords" content="fitness, healthcare, life hacks, FitSync Global" />
+  <meta name="author" content="FitSync Global" />
   <title>FitSync Global</title>
-  <link rel="stylesheet" href="style.css"/>
-  <style>
-    /* Loader Styles */
-    #loader {
-      position: fixed;
-      z-index: 9999;
-      background: #fff;
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .loader {
-      border: 8px solid #f3f3f3;
-      border-top: 8px solid #4CAF50;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    /* Contact Form Styles */
-    form {
-      max-width: 600px;
-      margin: 30px auto;
-      background: #f9f9f9;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    form label {
-      display: block;
-      margin: 10px 0 5px;
-      font-weight: bold;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-    form button {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    form button:hover {
-      background-color: #45a049;
-    }
-
-    /* Center Hero Text */
-    .hero {
-      text-align: center;
-      padding: 40px 20px;
-      background-color: #f0f0f0;
-    }
-    .hero h2 {
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 1.2em;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #f4f4f4;
-      padding: 20px;
-      text-align: center;
-      font-size: 0.9em;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Loader -->
-  <div id="loader">
-    <div class="loader"></div>
-  </div>
-
-  <!-- Header -->
   <header>
     <h1>FitSync Global</h1>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Fitness</a></li>
-        <li><a href="#">Healthcare</a></li>
-        <li><a href="#">Life Hacks</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="healthcare.html">Healthcare</a></li>
+        <li><a href="lifehacks.html">Life Hacks</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Main Content -->
   <main>
-    <div class="hero">
-      <h2>Your Journey to a Healthier Life Starts Here</h2>
-      <p>Explore fitness, healthcare, and life hacks all in one place.</p>
-    </div>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2 style="text-align:center;">Contact FitSync Global</h2>
-      <p style="text-align:center;">Have questions or want to get in touch with us? Fill out the form below or connect with us on social media!</p>
-
-      <form id="contact-form" action="submit_form.php" method="POST">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Your Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
-
-      <h3 style="text-align:center;">Follow Us</h3>
-      <ul style="text-align:center; list-style: none; padding: 0;">
-        <li><a href="https://facebook.com/fitsyncglobal" target="_blank">Facebook</a></li>
-        <li><a href="https://twitter.com/fitsyncglobal" target="_blank">Twitter</a></li>
-        <li><a href="https://instagram.com/fitsyncglobal" target="_blank">Instagram</a></li>
-      </ul>
-
-      <h3 style="text-align:center;">Contact Information</h3>
-      <p style="text-align:center;">Email: contact@fitsyncglobal.com</p>
-      <p style="text-align:center;">Phone: +123 456 7890</p>
-    </section>
+    <h2>Welcome to FitSync Global</h2>
+    <p style="text-align:center;">Your journey to a healthier life starts here.<br>
+    Explore fitness, healthcare, and life hacks all in one place.</p>
   </main>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 FitSync Global. All rights reserved.</p>
-    <ul style="list-style:none; padding:0;">
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Terms & Conditions</a></li>
-    </ul>
   </footer>
-
-  <!-- JavaScript: Loader + Form Validation -->
-  <script>
-    // Loader
-    window.addEventListener("load", function () {
-      document.getElementById("loader").style.display = "none";
-    });
-
-    // Form Validation
-    document.getElementById("contact-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const message = document.getElementById("message").value.trim();
-
-      if (!name || !email || !message) {
-        alert("Please fill in all fields.");
-        return;
-      }
-
-      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-      if (!email.match(emailPattern)) {
-        alert("Please enter a valid email address.");
-        return;
-      }
-
-      this.submit(); // Submit if validation passes
-    });
-  </script>
-
 </body>
 </html>
