@@ -4,61 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fast-Fit Global</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .join-btn, .explore-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .join-btn {
+            background-color: #28a745;
+            color: #fff;
+        }
+
+        .explore-btn {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .social-links {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .social-links a {
+            margin: 0 15px;
+        }
+
+        .social-links img {
+            width: 40px;
+            height: 40px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .join-now {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .fitness-tips, .testimonials, .explore-blog {
+            margin-top: 40px;
+        }
+
+        .fitness-tips ul, .explore-blog ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .fitness-tips li, .explore-blog li {
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header Section -->
     <header>
         <h1>Fast-Fit Global</h1>
         <p>Your journey to better health and fitness starts here.</p>
     </header>
 
-    <!-- Main Content Section -->
-    <div class="main-content">
-        <h2>Welcome to Fast-Fit Global</h2>
-        <p>We provide you with the tools, tips, and guidance to take your fitness journey to the next level.</p>
-
-        <!-- Join Now Section -->
-        <section id="join" class="join-now">
-            <h3>Join Now and Start Your Fitness Journey</h3>
-
-            <!-- Fitness Tips Section -->
-            <section class="fitness-tips">
-                <h4>Fitness Tips for You</h4>
-                <ul>
-                    <li><a href="#">The Best Morning Routine to Boost Your Day</a></li>
-                    <li><a href="#">5 Simple Weight Loss Tips to Get You Started</a></li>
-                    <li><a href="#">How to Stay Consistent with Your Workout Plan</a></li>
-                </ul>
-            </section>
-
-            <!-- Testimonials Section -->
-            <section class="testimonials">
-                <h4>Success Stories</h4>
-                <p><strong>John Doe</strong> - "I lost 20 pounds in 3 months thanks to the advice and support from Fast-Fit Global!"</p>
-                <p><strong>Jane Smith</strong> - "This platform has transformed my fitness routine. I feel stronger and more motivated every day."</p>
-            </section>
-
-            <!-- Explore Blog Section -->
-            <section class="explore-blog">
-                <h4>Explore Our Blog</h4>
-                <p>Find a range of articles and guides on fitness, nutrition, and life hacks to help you achieve your goals.</p>
-                <ul>
-                    <li><a href="#">How to Create a Sustainable Fitness Plan</a></li>
-                    <li><a href="#">Meal Prep Tips for Busy People</a></li>
-                    <li><a href="#">Staying Motivated: Overcoming Fitness Plateaus</a></li>
-                </ul>
-            </section>
-
-            <!-- Call to Action -->
-            <a href="#join" class="join-btn">Join Now</a>
-        </section>
+    <div class="content">
+        <h2>Welcome to Your Fitness Journey</h2>
+        <p>Find tips, guides, and resources to help you improve your health and fitness. Start today and feel better tomorrow!</p>
+        <a href="#explore" class="explore-btn">Explore Blog</a>
+        <a href="#join" class="join-btn">Join Now</a>
     </div>
+
+    <!-- Join Now Section -->
+    <section id="join" class="join-now">
+        <h3>Join Now and Start Your Fitness Journey</h3>
+
+        <!-- Fitness Tips Section -->
+        <section class="fitness-tips">
+            <h4>Fitness Tips for You</h4>
+            <ul>
+                <li><a href="#">The Best Morning Routine to Boost Your Day</a></li>
+                <li><a href="#">5 Simple Weight Loss Tips to Get You Started</a></li>
+                <li><a href="#">How to Stay Consistent with Your Workout Plan</a></li>
+            </ul>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <h4>Success Stories</h4>
+            <p><strong>John Doe</strong> - "I lost 20 pounds in 3 months thanks to the advice and support from Fast-Fit Global!"</p>
+            <p><strong>Jane Smith</strong> - "This platform has transformed my fitness routine. I feel stronger and more motivated every day."</p>
+        </section>
+
+        <!-- Explore Blog Section -->
+        <section class="explore-blog">
+            <h4>Explore Our Blog</h4>
+            <p>Find a range of articles and guides on fitness, nutrition, and life hacks to help you achieve your goals.</p>
+            <ul>
+                <li><a href="#">How to Create a Sustainable Fitness Plan</a></li>
+                <li><a href="#">Meal Prep Tips for Busy People</a></li>
+                <li><a href="#">Staying Motivated: Overcoming Fitness Plateaus</a></li>
+            </ul>
+        </section>
+
+        <!-- Call to Action -->
+        <a href="#join" class="join-btn">Join Now</a>
+    </section>
 
     <!-- Footer Section with Social Media Links -->
     <footer>
-        <div class="social-media">
+        <p>Follow us on social media:</p>
+        <div class="social-links">
             <a href="https://twitter.com/yourprofile" target="_blank">
                 <img src="twitter-logo.png" alt="Twitter">
             </a>
