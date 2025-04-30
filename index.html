@@ -1,18 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
   <title>FitSync Global</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* Loader Styles */
+    #loader {
+      position: fixed;
+      z-index: 9999;
+      background: #fff;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .loader {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #4CAF50;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Contact Form Styles */
+    form {
+      max-width: 600px;
+      margin: 30px auto;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    form label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    form button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #45a049;
+    }
+
+    /* Center Hero Text */
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #f0f0f0;
+    }
+    .hero h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2em;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #f4f4f4;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-  
+
   <!-- Loader -->
-<div id="loader">
-    <div class="spinner"></div>
-</div>
+  <div id="loader">
+    <div class="loader"></div>
+  </div>
 
   <!-- Header -->
   <header>
@@ -23,119 +105,86 @@
         <li><a href="#">Fitness</a></li>
         <li><a href="#">Healthcare</a></li>
         <li><a href="#">Life Hacks</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Main Content -->
   <main>
-    <h2 style="text-align: center;">Your Journey to a Healthier Life Starts Here.</h2>
-    <p style="text-align: center;">Explore fitness, healthcare, and life hacks all in one place.</p>
+    <div class="hero">
+      <h2>Your Journey to a Healthier Life Starts Here</h2>
+      <p>Explore fitness, healthcare, and life hacks all in one place.</p>
+    </div>
 
     <!-- Contact Section -->
     <section id="contact">
-      <div class="contact-container">
-        <h2>Contact FitSync Global</h2>
-        <p>We'd love to hear from you! Fill out the form below and we'll get back to you shortly.</p>
+      <h2 style="text-align:center;">Contact FitSync Global</h2>
+      <p style="text-align:center;">Have questions or want to get in touch with us? Fill out the form below or connect with us on social media!</p>
 
-     <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
-  
-  <label for="name">Your Name</label>
-  <input type="text" id="name" name="name" required>
-  <small id="nameError" class="error-message"></small> <!-- Error message for Name -->
+      <form id="contact-form" action="submit_form.php" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
 
-  <label for="email">Your Email</label>
-  <input type="email" id="email" name="email" required>
-  <small id="emailError" class="error-message"></small> <!-- Error message for Email -->
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required>
 
-  <label for="message">Your Message</label>
-  <textarea id="message" name="message" required></textarea>
-  <small id="messageError" class="error-message"></small> <!-- Error message for Message -->
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
-  <button type="submit">Send Message</button>
+        <button type="submit">Send Message</button>
+      </form>
 
-   </form>
+      <h3 style="text-align:center;">Follow Us</h3>
+      <ul style="text-align:center; list-style: none; padding: 0;">
+        <li><a href="https://facebook.com/fitsyncglobal" target="_blank">Facebook</a></li>
+        <li><a href="https://twitter.com/fitsyncglobal" target="_blank">Twitter</a></li>
+        <li><a href="https://instagram.com/fitsyncglobal" target="_blank">Instagram</a></li>
+      </ul>
 
-        <div class="social-links">
-          <h3>Follow Us</h3>
-          <a href="https://facebook.com/fitsyncglobal" target="_blank">Facebook</a>
-          <a href="https://twitter.com/fitsyncglobal" target="_blank">Twitter</a>
-          <a href="https://instagram.com/fitsyncglobal" target="_blank">Instagram</a>
-        </div>
-
-        <div class="contact-info">
-          <h3>Contact Information</h3>
-          <p>Email: contact@fitsyncglobal.com</p>
-          <p>Phone: +123 456 7890</p>
-        </div>
-      </div>
+      <h3 style="text-align:center;">Contact Information</h3>
+      <p style="text-align:center;">Email: contact@fitsyncglobal.com</p>
+      <p style="text-align:center;">Phone: +123 456 7890</p>
     </section>
   </main>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 FitSync Global. All rights reserved.</p>
-    <ul>
+    <ul style="list-style:none; padding:0;">
       <li><a href="#">Privacy Policy</a></li>
       <li><a href="#">Terms & Conditions</a></li>
     </ul>
   </footer>
-  
+
+  <!-- JavaScript: Loader + Form Validation -->
   <script>
-  const form = document.getElementById('contact-form');
+    // Loader
+    window.addEventListener("load", function () {
+      document.getElementById("loader").style.display = "none";
+    });
 
-  form.addEventListener('submit', function(event) {
-    let isValid = true;
+    // Form Validation
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
 
-    // Get fields
-    const name = document.getElementById('name');
-    const email = document.getElementById('email');
-    const message = document.getElementById('message');
+      if (!name || !email || !message) {
+        alert("Please fill in all fields.");
+        return;
+      }
 
-    // Get error message elements
-    const nameError = document.getElementById('nameError');
-    const emailError = document.getElementById('emailError');
-    const messageError = document.getElementById('messageError');
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!email.match(emailPattern)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
 
-    // Clear previous errors
-    nameError.textContent = '';
-    emailError.textContent = '';
-    messageError.textContent = '';
-
-    // Validate Name
-    if (name.value.trim() === '') {
-      nameError.textContent = 'Please enter your name.';
-      isValid = false;
-    }
-
-    // Validate Email
-    if (email.value.trim() === '') {
-      emailError.textContent = 'Please enter your email.';
-      isValid = false;
-    } else if (!isValidEmail(email.value.trim())) {
-      emailError.textContent = 'Please enter a valid email address.';
-      isValid = false;
-    }
-
-    // Validate Message
-    if (message.value.trim() === '') {
-      messageError.textContent = 'Please enter your message.';
-      isValid = false;
-    }
-
-    // If any validation fails, prevent form from submitting
-    if (!isValid) {
-      event.preventDefault();
-    }
-  });
-
-  // Helper function to check valid email format
-  function isValidEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-  }
-</script>
+      this.submit(); // Submit if validation passes
+    });
+  </script>
 
 </body>
 </html>
