@@ -1,87 +1,88 @@
+/* Reset and Base */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: #f6f7f9;
-  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  color: #222;
+  background: url('pattern.png') repeat; /* Use your pattern background */
 }
 
-.header {
-  background-color: white;
+/* Header */
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  border-bottom: 1px solid #ddd;
+  background: white;
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.nav-menu {
   font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
 }
 
-.breadcrumb {
-  background: #e9ecef;
-  padding: 0.75rem 1rem;
-  font-size: 0.9rem;
-  color: #6c757d;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
-.main-content {
-  padding: 1.5rem;
-  background: linear-gradient(to bottom, #dfe4ea, #f1f2f6);
-  text-align: left;
+nav ul li a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
 }
 
-.main-content h1 {
-  margin-top: 0;
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #f0f0f0, #d4d4d4);
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
 }
 
-.tags {
-  margin: 1rem 0;
+.hero .overlay {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.tag {
-  display: inline-block;
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  margin-right: 0.5rem;
-  font-size: 0.85rem;
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
-.tag.cpa {
-  background: #ced6e0;
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
-.tag.rev {
-  background: #2ed573;
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+button.details {
+  background-color: #555;
   color: white;
-}
-
-.buttons .btn {
-  padding: 0.6rem 1.2rem;
+  padding: 10px 20px;
   border: none;
-  margin-right: 0.5rem;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 0.95rem;
+  border-radius: 6px;
 }
 
-.btn.details {
-  background: #57606f;
-  color: white;
+button.join {
+  background-color: white;
+  color: #222;
+  padding: 10px 20px;
+  border: 2px solid #999;
+  border-radius: 6px;
 }
 
-.btn.join {
-  background: white;
-  border: 1px solid #ccc;
-}
-
-.program-title {
-  padding: 1rem;
-  background: white;
-  border-top: 1px solid #ddd;
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #eee;
+  margin-top: 40px;
 }
