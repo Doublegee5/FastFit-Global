@@ -1,3 +1,4 @@
+<script src="js/script.js"></script>
 // Smooth scroll effect for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
