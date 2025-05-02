@@ -250,6 +250,14 @@
         function closeModal() {
             document.getElementById('joinModal').style.display = 'none';
         }
+        // Hide social links after joining
+document.getElementById('joinForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    document.getElementById('joinModal').style.display = 'none';
+    document.querySelector('.content').style.display = 'block';
+    document.querySelector('.join-now').style.display = 'none';
+    document.querySelector('.social-home').style.display = 'none'; // Hides social links
+});
     </script>
 
 </body>
