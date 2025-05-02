@@ -8,3 +8,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+function joinNow() {
+  document.getElementById('joinModal').style.display = 'none';
+  document.querySelector('.content').style.display = 'block';
+  document.getElementById('socialLinks').style.display = 'none'; // Hides social links
+}
