@@ -227,6 +227,24 @@
 </footer>
 
     <script>
+        // Join button opens modal
+document.getElementById('joinBtn').addEventListener('click', function() {
+    document.getElementById('joinModal').style.display = 'flex';
+});
+
+// On form submission: hide modal, show content, hide join, hide social icons
+document.getElementById('joinForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    document.getElementById('joinModal').style.display = 'none';
+    document.querySelector('.content').style.display = 'block';
+    document.querySelector('.join-now').style.display = 'none';
+    document.querySelector('.social-home').style.display = 'none'; // Hides social icons
+});
+
+// Close modal manually
+function closeModal() {
+    document.getElementById('joinModal').style.display = 'none';
+}
         // Show modal when Join Now button is clicked
         document.getElementById('joinBtn').addEventListener('click', function() {
             document.getElementById('joinModal').style.display = 'flex';
