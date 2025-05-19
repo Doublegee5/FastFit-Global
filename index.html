@@ -1,282 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fast-Fit Global</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        .content {
-            padding: 20px;
-            text-align: center;
-            display: none; /* Hidden by default, shown after joining */
-        }
-
-        .join-btn, .explore-btn {
-            display: inline-block;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-
-        .join-btn {
-            background-color: #28a745;
-            color: #fff;
-        }
-
-        .explore-btn {
-            background-color: #007bff;
-            color: #fff;
-        }
-
-        <div class="social-links" id="socialLinks">
-  <a href="https://twitter.com/ObasiChristoph6" target="_blank">
-    <img src="images/x.png" alt="Twitter">
-  </a>
-  <a href="https://github.com/Doublegee5" target="_blank">
-    <img src="images/github.png" alt="GitHub">
-  </a>
-  <a href="https://www.linkedin.com/in/christopher-obasi" target="_blank">
-    <img src="images/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: #fff;
-        }
-
-        .join-now {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .explore-blog {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: none; /* Hidden by default */
-        }
-
-        .explore-blog h2 {
-            font-size: 24px;
-            color: #333;
-        }
-
-        .explore-blog p {
-            font-size: 16px;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .explore-blog ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .explore-blog li {
-            margin: 10px 0;
-        }
-
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            background-color: #fff;
-            padding: 20px;
-            text-align: center;
-            border-radius: 5px;
-            width: 300px;
-        }
-
-        .modal input {
-            padding: 10px;
-            margin: 10px 0;
-            width: 100%;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-
-        .modal button {
-            padding: 10px 20px;
-            background-color: #28a745;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-        }
-
-        .modal button.close-btn {
-            background-color: #dc3545;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fast-Fit Global</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header>
-        <h1>Fast-Fit Global</h1>
-        <p>Your journey to better health and fitness starts here.</p>
-    </header>
-
-    <div class="content">
-    <h2>Welcome to Your Fitness Journey</h2>
-    <p>Find tips, guides, and resources to help you improve your health and fitness. Start today and feel better tomorrow!</p>
-
-    <!-- Join now button -->
-    <a href="#join" class="join-btn">Join Now</a>
-
-    <!-- Links below Join Now -->
-    <div style="margin-top: 30px;">
-        <a href="explore-blog.html" class="explore-btn">explore-blog</a>
-        <a href="fitness.html" class="explore-btn">Fitness</a>
-        <a href="lifehacks.html" class="explore-btn">Lifehacks</a>
-        <a href="healthcare.html" class="explore-btn">Healthcare</a>
+  <header class="hero">
+    <nav class="navbar">
+      <h1 class="logo">Fast-Fit Global</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-text">
+      <h2>Transform Your Body, Mind & Life</h2>
+      <p>Your fitness journey starts here. Discover routines, diet tips, and motivation that lasts.</p>
+      <a href="explore.html" class="btn">Explore Blog</a>
     </div>
-</div>
-</div>
+  </header>
 
-    <!-- Join Now Section (Hidden by default) -->
-    <section id="join" class="join-now">
-        <h3>Join Now and Start Your Fitness Journey</h3>
-        <button class="join-btn" id="joinBtn">Join Now</button>
-    </section>
-
-    <!-- Modal for Joining -->
-    <div id="joinModal" class="modal">
-        <div class="modal-content">
-            <h3>Join Fast-Fit Global</h3>
-            <p>Enter your details to get started:</p>
-            <form id="joinForm">
-                <input type="text" id="name" placeholder="Enter your name" required>
-                <input type="email" id="email" placeholder="Enter your email" required>
-                <button type="submit">Join Now</button>
-            </form>
-            <button class="close-btn" onclick="closeModal()">Close</button>
-        </div>
+  <section class="features">
+    <div class="feature">
+      <img src="https://source.unsplash.com/400x300/?workout" alt="Workout"/>
+      <h3>Daily Workouts</h3>
+      <p>Stay fit with our easy-to-follow, effective daily workout routines for all fitness levels.</p>
     </div>
-
-    <!-- Explore Blog Section (Hidden by default, shown after clicking Explore Blog) -->
-    <div id="exploreBlog" class="explore-blog">
-        <h2>Explore Our Fitness and Healthcare Blog</h2>
-        <p>Our blog is dedicated to providing valuable insights, tips, and advice to help you lead a healthier and more active life. Here, you will find a variety of articles on fitness, nutrition, mental well-being, and more. Dive in and start learning how to improve your health and fitness with our expert advice.</p>
-        
-        <h3>Recent Posts:</h3>
-        <ul>
-            <li><strong>The Importance of Regular Exercise</strong> - Discover why making exercise a part of your daily routine can boost your health and longevity.</li>
-            <li><strong>Nutrition Tips for a Healthier You</strong> - Learn how to fuel your body with the right foods to achieve optimal performance and energy.</li>
-            <li><strong>Mental Health and Fitness</strong> - Understand the connection between physical fitness and mental well-being, and how one can enhance the other.</li>
-            <li><strong>How to Stay Motivated During Your Fitness Journey</strong> - Overcoming obstacles and staying motivated can be challenging. Learn effective strategies to stay on track.</li>
-        </ul>
-
-        <h3>Popular Categories:</h3>
-        <ul>
-            <li><strong>Fitness Routines:</strong> Discover workout plans and tips to suit all fitness levels.</li>
-            <li><strong>Healthy Recipes:</strong> Easy-to-follow, nutritious recipes to complement your fitness goals.</li>
-            <li><strong>Wellness Tips:</strong> Advice on maintaining balance in your life, including sleep, stress management, and more.</li>
-        </ul>
+    <div class="feature">
+      <img src="https://source.unsplash.com/400x300/?healthy-food" alt="Healthy Eating"/>
+      <h3>Healthy Nutrition</h3>
+      <p>Fuel your body with smart meal plans and nutrition advice tailored for results.</p>
     </div>
-
-    <!-- Footer Section with Social Media Links (Homepage Only) -->
-<footer class="social-home">
-    <p>Follow us on social media:</p>
-    <div class="social-links">
-        <a href="https://twitter.com/yourprofile" target="_blank">
-            <img src="twitter-logo.png" alt="Twitter">
-        </a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank">
-            <img src="linkedin-logo.png" alt="LinkedIn">
-        </a>
-        <a href="https://facebook.com/yourprofile" target="_blank">
-            <img src="facebook-logo.png" alt="Facebook">
-        </a>
-        <a href="https://instagram.com/yourprofile" target="_blank">
-            <img src="instagram-logo.png" alt="Instagram">
-        </a>
-        <a href="https://discord.com/invite/yourserver" target="_blank">
-            <img src="discord-logo.png" alt="Discord">
-        </a>
+    <div class="feature">
+      <img src="https://source.unsplash.com/400x300/?meditation" alt="Wellbeing"/>
+      <h3>Mind & Wellness</h3>
+      <p>Balance your life with mental health strategies, mindfulness, and relaxation techniques.</p>
     </div>
-</footer>
+  </section>
 
-    <script>
-        // Join button opens modal
-document.getElementById('joinBtn').addEventListener('click', function() {
-    document.getElementById('joinModal').style.display = 'flex';
-});
+  <section class="cta">
+    <h2>Ready to Change Your Life?</h2>
+    <p>Join thousands transforming their health with Fast-Fit Global.</p>
+    <a href="contact.html" class="btn">Get Started</a>
+  </section>
 
-// On form submission: hide modal, show content, hide join, hide social icons
-document.getElementById('joinForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    document.getElementById('joinModal').style.display = 'none';
-    document.querySelector('.content').style.display = 'block';
-    document.querySelector('.join-now').style.display = 'none';
-    document.querySelector('.social-home').style.display = 'none'; // Hides social icons
-});
-
-// Close modal manually
-function closeModal() {
-    document.getElementById('joinModal').style.display = 'none';
-}
-        // Show modal when Join Now button is clicked
-        document.getElementById('joinBtn').addEventListener('click', function() {
-            document.getElementById('joinModal').style.display = 'flex';
-        });
-
-        // Close the modal when the user submits the form or clicks the close button
-        document.getElementById('joinForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            document.getElementById('joinModal').style.display = 'none';
-            document.querySelector('.content').style.display = 'block';  // Show content after join
-            document.querySelector('.join-now').style.display = 'none';  // Hide Join Now button
-        });
-
-        // Show the Explore Blog content when the Explore Blog button is clicked
-        document.getElementById('exploreBtn').addEventListener('click', function() {
-            document.getElementById('exploreBlog').style.display = 'block';  // Show Explore Blog content
-        });
-
-        // Close modal
-        function closeModal() {
-            document.getElementById('joinModal').style.display = 'none';
-        }
-        
-        // Hide social links after joining
-    document.getElementById('joinForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    document.getElementById('joinModal').style.display = 'none';
-    document.querySelector('.content').style.display = 'block';
-    document.querySelector('.join-now').style.display = 'none';
-    document.querySelector('.social-home').style.display = 'none'; // Hides social links
-});
-    </script>
-
+  <footer>
+    <p>&copy; 2025 Fast-Fit Global. All rights reserved.</p>
+  </footer>
 </body>
 </html>
