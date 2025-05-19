@@ -87,10 +87,11 @@ a {
   gap: 20px;
 }
 
-.feature {
-  flex: 1 1 300px;
-  max-width: 350px;
-  text-align: center;
+.feature img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .feature img {
