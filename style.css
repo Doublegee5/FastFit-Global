@@ -1,169 +1,78 @@
-style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #fff;
-    }
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .hero-section {
-  background-color: #000080; /* Strict Navy Blue */
-  color: white;
-  padding: 100px 20px;
+/* Wellbeing Section Container */
+.wellbeing-section {
+  background-color: #000080; /* Navy blue */
+  color: #fff;
+  padding: 60px 20px;
   text-align: center;
 }
 
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero-section h1 {
-  font-size: 3em;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.brand-name {
-  color: #FFD700; /* Gold color for brand highlight */
-}
-
-.hero-section p {
-  font-size: 1.2em;
+/* Optional Section Heading */
+.wellbeing-section h2 {
+  font-size: 2.5rem;
+  color: #FFD700; /* Gold */
   margin-bottom: 30px;
-  font-weight: 300;
 }
 
-.hero-btn {
-  background-color: #FFD700; /* Gold Button */
-  color: #000080; /* Navy text */
-  padding: 12px 30px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1em;
-  transition: background 0.3s ease;
+/* Flexbox Layout */
+.wellbeing-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
-.hero-btn:hover {
-  background-color: #e6c200;
-}
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.8rem;
-      font-weight: bold;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    .nav-links a {
-      color: #fff;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #f0c040;
-    }
-
-    .hero-text h2 {
-      font-size: 3rem;
-      margin: 20px 0 10px;
-    }
-
-    .hero-text p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #f0c040;
-      color: #000;
-      padding: 10px 25px;
-      border-radius: 25px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background: #e5b839;
-    }
-
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      padding: 40px 20px;
-      background: #f7f7f7;
-      gap: 20px;
-    }
-
-    .feature img {
+/* Shared Box Styles */
+.Nutrition-content,
+.wellbeing-box {
+  background-color: #001f4d;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 350px;
   width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
 
-    .workout-image img {
+.Nutrition-content:hover,
+.wellbeing-box:hover {
+  transform: translateY(-10px);
+}
+
+/* Image Styles */
+.Nutrition-content img,
+.wellbeing-box img {
   width: 100%;
-  max-width: 600px;
   height: auto;
-  display: block;
-  margin: 20px auto;
   border-radius: 10px;
+  margin-bottom: 15px;
 }
 
-    .feature h3 {
-      margin: 15px 0 10px;
-      font-size: 1.4rem;
-      color: #333;
-    }
+/* Headings */
+.Nutrition-content h3,
+.wellbeing-box h3 {
+  font-size: 1.6rem;
+  color: #FF6347; /* Tomato red */
+  margin-bottom: 10px;
+}
 
-    .feature p {
-      font-size: 1rem;
-      color: #666;
-    }
-
-    .cta {
-      text-align: center;
-      background: #333;
-      color: #fff;
-      padding: 50px 20px;
-    }
-
-    .cta h2 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #111;
-      color: #ccc;
-      font-size: 0.9rem;
-    }
-  </style
+/* Paragraphs */
+.Nutrition-content p,
+.wellbeing-box p {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.5;
+}
