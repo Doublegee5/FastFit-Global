@@ -24,25 +24,50 @@
       color: inherit;
     }
 
-    .hero {
-  background-color: #e60000; /* Red background */
-  color: #000; /* Black text */
+    .hero-section {
+  background-color: #001f3f; /* Navy blue */
+  color: #fff;
   text-align: center;
-  padding: 60px 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 100px 20px;
+  background-image: linear-gradient(135deg, #001f3f 60%, #003366 100%);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-.hero h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.hero p {
+.hero-section h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.brand-name {
+  color: #ffcc00; /* Bright accent for brand name */
+}
+
+.hero-section p {
   font-size: 1.2em;
+  margin-bottom: 30px;
+  font-weight: 300;
 }
 
-.highlight {
-  font-weight: bold;
+.hero-btn {
+  background-color: #ffcc00;
+  color: #001f3f;
+  padding: 12px 30px;
+  font-size: 1em;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #e6b800;
 }
 
     .navbar {
@@ -154,9 +179,13 @@
   </style>
 </head>
 <body>
-  <header class="hero">
-   <h1>Welcome to <span class="highlight">FastFit-Global</span></h1>
-   <p>Your Journey to Fitness & Confidence Starts Here</p>
+ <header class="hero">
+  <div class="hero-content">
+    <h1>Welcome to <span class="brand-name">FastFit-Global</span></h1>
+    <p>Unleash your potential. Build strength, confidence, and discipline — one rep at a time.</p>
+    <a href="#explore" class="hero-btn">Get Started</a>
+  </div>
+</header>
     <nav class="navbar">
       <h1 class="logo">Fast-Fit Global</h1>
       <ul class="nav-links">
