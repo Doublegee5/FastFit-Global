@@ -25,15 +25,25 @@
     }
 
     .hero {
-      background: url('https://source.unsplash.com/1600x800/?fitness,health') no-repeat center center/cover;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
+  background-color: #e60000; /* Red background */
+  color: #000; /* Black text */
+  text-align: center;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+}
+
+.highlight {
+  font-weight: bold;
+}
 
     .navbar {
       display: flex;
@@ -145,6 +155,8 @@
 </head>
 <body>
   <header class="hero">
+   <h1>Welcome to <span class="highlight">FastFit-Global</span></h1>
+   <p>Your Journey to Fitness & Confidence Starts Here</p>
     <nav class="navbar">
       <h1 class="logo">Fast-Fit Global</h1>
       <ul class="nav-links">
