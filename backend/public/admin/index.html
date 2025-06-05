@@ -1,15 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Subscribe | FastFit Global</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="FastFit Global – Elevate your body, mind, and habits with expert workouts, nutrition, and self-mastery.">
+  <meta name="keywords" content="fitness, wellness, health, personal growth, workouts, FastFit Global">
+  <meta name="author" content="Christopher Chibueze Obasi">
+  <meta name="robots" content="index, follow">
+
+  <title>FastFit Global | Fitness. Nutrition. Mindset.</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <h1>Subscribe to FastFit Global</h1>
-  <form action="/subscribe" method="POST">
-    <input type="email" name="email" placeholder="Enter your email" required>
-    <button type="submit">Subscribe</button>
-  </form>
+  <div class="container">
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+      <h1 class="logo">FastFit Global</h1>
+      <ul class="nav-links">
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero hero-section">
+      <div class="hero-content">
+        <h1><span class="welcome-text">Welcome to</span> <span class="brand-name">FastFit Global</span></h1>
+        <p>Redefine your life through movement, mindful eating, and mental clarity. Your transformation starts now.</p>
+      </div>
+    </header>
+
+    <!-- Callout Section -->
+    <section class="hero-text">
+      <h2>Body • Mind • Purpose</h2>
+      <p>Build habits that last. Whether you’re starting out or leveling up — FastFit is your all-in-one wellness companion.</p>
+      <a href="explore.html" class="btn">Explore the Journey</a>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <a href="workouts.html" class="feature">
+        <img src="images/IMG_8535.jpeg" alt="Workout Programs">
+        <h3>Daily Workouts</h3>
+        <p>Level up with curated routines for strength, endurance, and everyday fitness. Designed for every body.</p>
+      </a>
+
+      <a href="nutrition.html" class="feature">
+        <img src="images/IMG_8038.jpeg" alt="Nutrition Guidance">
+        <h3>Healthy Nutrition</h3>
+        <p>Fuel right with simple, sustainable meal ideas and food hacks to keep your body energized and lean.</p>
+      </a>
+
+      <a href="wellness.html" class="feature">
+        <img src="images/IMG_8040.jpeg" alt="Mind and Wellness">
+        <h3>Mind & Wellness</h3>
+        <p>Master your mindset. Discover tools for mental fitness, stress recovery, and inner growth.</p>
+      </a>
+    </section>
+
+    <section class="join-movement" id="signup">
+  <div class="join-content">
+    <h2>Join the Movement</h2>
+    <p>Be part of a global fitness community that's changing lives every day. Enter your email to stay inspired and receive exclusive updates.</p>
+    
+    <form class="signup-form" action="https://fastfit-backend.up.railway.app/subscribe" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <button type="submit" class="btn">Join Now</button>
+    </form>
+  </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 FastFit Global. Designed with strength & purpose by Christopher Chibueze Obasi.</p>
+    </footer>
+  </div>
 </body>
 </html>
