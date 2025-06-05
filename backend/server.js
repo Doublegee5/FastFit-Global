@@ -7,43 +7,40 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Configure Nodemailer transporter
 const transporter = nodemailer.createTransport({
-  service: 'gmail', // or your email provider
+  service: 'gmail',
   auth: {
-    user: 'your-email@gmail.com',
-    pass: 'your-email-app-password' // see note below
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
   }
 });
 
+const subscribersFile = path.join(__dirname, 'subscribers.txt');
+
 app.post('/subscribe', (req, res) => {
   const email = req.body.email;
-  if (!email) {
-    return res.status(400).send('Email is required');
-  }
+  if (!email) return res.status(400).send('Email is required');
 
-  // Append the email to a local file
-  fs.appendFile('subscribers.txt', email + '\n', (err) => {
+  fs.appendFile(subscribersFile, email + '\n', (err) => {
     if (err) {
       console.error('Error writing to file:', err);
       return res.status(500).send('Server error, please try again later');
     }
 
-    // Send confirmation email
     const mailOptions = {
-      from: '"FastFit Global" <your-email@gmail.com>',
+      from: `"FastFit Global" <${process.env.EMAIL_USER}>`,
       to: email,
       subject: 'Subscription Confirmation',
       text: `Thank you for subscribing to FastFit Global! Stay tuned for updates.`
     };
 
-    transporter.sendMail(mailOptions, (error, info) => {
+    transporter.sendMail(mailOptions, (error) => {
       if (error) {
         console.error('Error sending email:', error);
         return res.status(500).send('Failed to send confirmation email');
-      } 
+      }
       res.send('Thanks for subscribing! A confirmation email has been sent.');
     });
   });
