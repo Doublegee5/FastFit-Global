@@ -1,47 +1,50 @@
+// server.js
 const express = require('express');
-const fs = require('fs');
 const path = require('path');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 // Middleware
-app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
-// Email transporter setup
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+// Example contact form endpoint (optional)
+app.post('/send-email', async (req, res) => {
+  const { name, email, message } = req.body;
+
+  try {
+    // Setup mail transport
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.EMAIL_USER,    // Your email
+        pass: process.env.EMAIL_PASS     // Your email password or App Password
+      }
+    });
+
+    // Email content
+    const mailOptions = {
+      from: email,
+      to: process.env.EMAIL_USER,       // Receiving email
+      subject: `Contact from ${name}`,
+      text: message
+    };
+
+    await transporter.sendMail(mailOptions);
+    res.status(200).json({ message: 'Email sent successfully!' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Failed to send email.' });
   }
 });
 
-// Subscription endpoint
-const subscribersFile = path.join(__dirname, 'subscribers.txt');
-
-app.post('/subscribe', (req, res) => {
-  const email = req.body.email;
-  if (!email) return res.status(400).send('Email is required');
-
-  fs.appendFile(subscribersFile, email + '\n', (err) => {
-    if (err) return res.status(500).send('Server error writing to file');
-
-    const mailOptions = {
-      from: `"FastFit Global" <${process.env.EMAIL_USER}>`,
-      to: email,
-      subject: 'Subscription Confirmation',
-      text: `Thank you for subscribing to FastFit Global! Stay tuned for updates.`
-    };
-
-    transporter.sendMail(mailOptions, (error) => {
-      if (error) return res.status(500).send('Failed to send email');
-      res.send('Thanks for subscribing! A confirmation email has been sent.');
-    });
-  });
+// Fallback to serve index.html on unmatched routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 // Start server
